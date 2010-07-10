@@ -1,6 +1,6 @@
 %define name	redshift
 %define version	1.4.1
-%define rel	1
+%define rel	2
 
 Name:		%{name}
 Version:	%{version}
@@ -15,8 +15,13 @@ BuildRequires:	x11-server-devel
 BuildRequires:	glib2-devel
 BuildRequires:	libGConf2-devel
 BuildRequires:	libxxf86vm-devel
+
+%package gtk
+Summary:	GTK integration for Redshift
+Group:		Graphical desktop/Other
 %py_requires
 Requires:	pygtk2.0
+Requires:	redshift = %{version}
 
 %description
 Redshift adjusts the color temperature of your screen according to your
@@ -28,6 +33,10 @@ different color temperature is set during night and daytime. During
 twilight and early morning, the color temperature transitions smoothly
 from night to daytime temperature to allow your eyes to slowly
 adapt.
+
+%description gtk
+GTK integration for Redshift, a screen color temperature adjustment
+program.
 
 %prep
 %setup -q
@@ -63,8 +72,11 @@ rm -rf %{buildroot}
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc NEWS AUTHORS README 
-%{_bindir}/gtk-%{name}
 %{_bindir}/%{name}
+
+%files gtk
+%defattr(-,root,root)
+%{_bindir}/gtk-%{name}
 %{_iconsdir}/hicolor/scalable/apps/%{name}*.svg
 %{_datadir}/applications/%{name}.desktop
 %{python_sitelib}/gtk_redshift/
