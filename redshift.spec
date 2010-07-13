@@ -1,6 +1,6 @@
 %define name	redshift
 %define version	1.4.1
-%define rel	2
+%define rel	3
 
 Name:		%{name}
 Version:	%{version}
@@ -21,7 +21,7 @@ Summary:	GTK integration for Redshift
 Group:		Graphical desktop/Other
 %py_requires
 Requires:	pygtk2.0
-Requires:	redshift = %{version}
+Requires:	redshift = %{version}-%{release}
 
 %description
 Redshift adjusts the color temperature of your screen according to your
