@@ -1,6 +1,6 @@
 %define name	redshift
-%define version	1.4.1
-%define rel	3
+%define version	1.5
+%define rel	1
 
 Name:		%{name}
 Version:	%{version}
@@ -42,7 +42,9 @@ program.
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x \
+	--disable-rpath \
+	--enable-gui
 %make
 
 %install
@@ -50,19 +52,6 @@ rm -rf %{buildroot}
 %makeinstall_std \
 	uninstall-ubuntu_mono_dark_iconDATA \
 	uninstall-ubuntu_mono_light_iconDATA
-
-#desktop file
-mkdir -p %{buildroot}/%{_datadir}/applications/
-cat > %{buildroot}/%{_datadir}/applications/%{name}.desktop <<EOF
-[Desktop Entry]
-Name=Redshift
-Comment=Adjusts the color temperature of your screen
-Exec=gtk-redshift
-Terminal=false
-Type=Application
-Icon=%{name}
-Categories=Utility;
-EOF
 
 %find_lang %{name}
 
@@ -78,5 +67,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_bindir}/gtk-%{name}
 %{_iconsdir}/hicolor/scalable/apps/%{name}*.svg
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/gtk-%{name}.desktop
 %{python_sitelib}/gtk_redshift/
