@@ -1,5 +1,5 @@
 %define name	redshift
-%define version	1.5
+%define version	1.6
 %define rel	1
 
 Name:		%{name}
@@ -62,6 +62,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc NEWS AUTHORS README 
 %{_bindir}/%{name}
+%{_mandir}/man1/%{name}.*
 
 %files gtk
 %defattr(-,root,root)
