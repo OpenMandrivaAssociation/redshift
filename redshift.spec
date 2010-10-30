@@ -15,6 +15,7 @@ BuildRequires:	x11-server-devel
 BuildRequires:	glib2-devel
 BuildRequires:	libGConf2-devel
 BuildRequires:	libxxf86vm-devel
+BuildRequires:	python-devel
 
 %package gtk
 Summary:	GTK integration for Redshift
