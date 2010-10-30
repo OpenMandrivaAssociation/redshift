@@ -1,6 +1,6 @@
 %define name	redshift
 %define version	1.6
-%define rel	1
+%define rel	2
 
 Name:		%{name}
 Version:	%{version}
@@ -19,7 +19,6 @@ BuildRequires:	libxxf86vm-devel
 %package gtk
 Summary:	GTK integration for Redshift
 Group:		Graphical desktop/Other
-%py_requires
 Requires:	pygtk2.0
 Requires:	redshift = %{version}-%{release}
 
