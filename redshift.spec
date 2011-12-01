@@ -1,10 +1,9 @@
 %define name	redshift
-%define version	1.6
-%define rel	2
+%define version	1.7
 
 Name:		%{name}
 Version:	%{version}
-Release:	%mkrel %{rel}
+Release:	%mkrel 1
 Summary:	Adjusts the color temperature of your screen according to time of day
 Url:		http://jonls.dk/redshift/
 Source:		http://launchpad.net/redshift/trunk/%{version}/+download/%{name}-%{version}.tar.bz2
@@ -16,6 +15,9 @@ BuildRequires:	glib2-devel
 BuildRequires:	libGConf2-devel
 BuildRequires:	libxxf86vm-devel
 BuildRequires:	python-devel
+# For 1.7 geoclue support is reported to be broken, but later we can try it
+# BuildRequires: geoclue-devel
+# Requires:      geoclue
 
 %package gtk
 Summary:	GTK integration for Redshift
