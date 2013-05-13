@@ -13,7 +13,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	x11-server-devel
 BuildRequires:	glib2-devel
 BuildRequires:	libGConf2-devel
-BuildRequires:	libxxf86vm-devel
+BuildRequires:	pkgconfig(xxf86vm)
 BuildRequires:	python-devel
 # For 1.7 geoclue support is reported to be broken, but later we can try it
 # BuildRequires: geoclue-devel
