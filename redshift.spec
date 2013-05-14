@@ -11,7 +11,7 @@ License:	GPLv3+
 Group:		Graphical desktop/Other
 BuildRequires:	x11-server-devel
 BuildRequires:	glib2-devel
-BuildRequires:	libGConf2-devel
+BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	pkgconfig(xxf86vm)
 BuildRequires:	python-devel
 # For 1.7 geoclue support is reported to be broken, but later we can try it
