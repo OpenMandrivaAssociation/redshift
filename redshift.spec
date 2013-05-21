@@ -10,7 +10,7 @@ Source:		http://launchpad.net/redshift/trunk/%{version}/+download/%{name}-%{vers
 License:	GPLv3+
 Group:		Graphical desktop/Other
 BuildRequires:	x11-server-devel
-BuildRequires:	glib2-devel
+BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	pkgconfig(xxf86vm)
 BuildRequires:	python-devel
