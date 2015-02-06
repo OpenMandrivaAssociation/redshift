@@ -3,7 +3,7 @@
 
 Name:		%{name}
 Version:	%{version}
-Release:	3
+Release:	4
 Summary:	Adjusts the color temperature of your screen according to time of day
 Url:		http://jonls.dk/redshift/
 Source:		http://launchpad.net/redshift/trunk/%{version}/+download/%{name}-%{version}.tar.bz2
