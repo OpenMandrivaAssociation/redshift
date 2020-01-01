@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(xxf86vm)
 BuildRequires:	python-devel
 BuildRequires:  gettext
 BuildRequires:  gettext-devel
+BuildRequires:  intltool
 # For 1.7 geoclue support is reported to be broken, but later we can try it
 # BuildRequires: geoclue-devel
 # Requires:      geoclue
