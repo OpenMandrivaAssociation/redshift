@@ -49,7 +49,8 @@ program.
 %configure \
 	--disable-rpath \
 	--enable-gui \
-	--enable-geoclue2
+	--enable-geoclue2 \
+	--with-systemduserunitdir=/usr/lib/systemd/user
 %make
 
 %install
