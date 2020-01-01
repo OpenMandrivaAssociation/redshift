@@ -79,6 +79,6 @@ rm -rf %{buildroot}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/appdata/%{name}-gtk.appdata.xml
 %{python_sitelib}/redshift_gtk/
-%{_userunitdir}/*.service
+#{_userunitdir}/*.service
 
 
