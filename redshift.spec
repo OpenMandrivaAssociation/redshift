@@ -17,8 +17,9 @@ BuildRequires:	python-devel
 BuildRequires:	intltool
 
 # For 1.7 geoclue support is reported to be broken, but later we can try it
-BuildRequires: geoclue-devel
-Requires:      geoclue
+BuildRequires: 	geoclue-devel
+Requires:      	geoclue
+Requires:	systemd
 
 %package gtk
 Summary:	GTK integration for Redshift
@@ -75,6 +76,6 @@ rm -rf %{buildroot}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/appdata/%{name}-gtk.appdata.xml
 %{python_sitelib}/redshift_gtk/
-%{_userunitdir}*
+%{_userunitdir}/*.service
 
 
