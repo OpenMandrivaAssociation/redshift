@@ -48,7 +48,8 @@ program.
 %build
 %configure \
 	--disable-rpath \
-	--enable-gui
+	--enable-gui \
+	--enable-geoclue2
 %make
 
 %install
