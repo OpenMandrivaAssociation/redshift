@@ -14,7 +14,7 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	pkgconfig(xxf86vm)
 BuildRequires:	python-devel
-#BuildRequires:  gettext
+BuildRequires:	pkgconfig(systemd)
 BuildRequires:  gettext-devel
 BuildRequires:  intltool
 BuildRequires:  libtool
@@ -50,6 +50,7 @@ autopoint -f && AUTOPOINT="intltoolize --automake --copy" autoreconf -f -i
 
 %configure \
 	--disable-rpath \
+	--with-systemduserunitdir=%{_unitdir} \
 	--enable-gui
 %make
 
