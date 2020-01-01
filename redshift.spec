@@ -6,7 +6,7 @@ Version:	%{version}
 Release:	1
 Summary:	Adjusts the color temperature of your screen according to time of day
 Url:		http://jonls.dk/redshift/
-Source:		http://launchpad.net/redshift/trunk/%{version}/+download/%{name}-%{version}.tar.xz
+Source:		https://github.com/jonls/redshift/archive/v%{version}/%{name}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Graphical desktop/Other
 BuildRequires:	x11-server-devel
