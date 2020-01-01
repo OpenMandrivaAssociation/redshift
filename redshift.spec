@@ -45,6 +45,8 @@ program.
 %setup -q
 
 %build
+autoreconf
+
 %configure \
 	--disable-rpath \
 	--enable-gui
