@@ -45,9 +45,8 @@ program.
 
 %prep
 %setup -q
-
+autopoint -f && AUTOPOINT="intltoolize --automake --copy" autoreconf -f -i
 %build
-autoreconf
 
 %configure \
 	--disable-rpath \
