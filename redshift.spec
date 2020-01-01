@@ -1,12 +1,12 @@
 %define name	redshift
-%define version	1.7
+%define version	1.12
 
 Name:		%{name}
 Version:	%{version}
-Release:	4
+Release:	1
 Summary:	Adjusts the color temperature of your screen according to time of day
 Url:		http://jonls.dk/redshift/
-Source:		http://launchpad.net/redshift/trunk/%{version}/+download/%{name}-%{version}.tar.bz2
+Source:		http://launchpad.net/redshift/trunk/%{version}/+download/%{name}-%{version}.tar.xz
 License:	GPLv3+
 Group:		Graphical desktop/Other
 BuildRequires:	x11-server-devel
@@ -43,7 +43,7 @@ program.
 %setup -q
 
 %build
-%configure2_5x \
+%configure \
 	--disable-rpath \
 	--enable-gui
 %make
@@ -61,49 +61,18 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc NEWS AUTHORS README 
+%doc NEWS README 
 %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.*
 
 %files gtk
 %defattr(-,root,root)
-%{_bindir}/gtk-%{name}
+%{_bindir}/%{name}-gtk
 %{_iconsdir}/hicolor/scalable/apps/%{name}*.svg
-%{_datadir}/applications/gtk-%{name}.desktop
-%{python_sitelib}/gtk_redshift/
-
-
-%changelog
-* Thu Dec 01 2011 Andrey Bondrov <abondrov@mandriva.org> 1.7-1
-+ Revision: 735917
-- New version 1.7
-
-* Sat Oct 30 2010 Jani Välimaa <wally@mandriva.org> 1.6-2mdv2011.0
-+ Revision: 590582
-- rebuild for new python 2.7
-- drop py_requires macro
-
-* Mon Oct 18 2010 Jani Välimaa <wally@mandriva.org> 1.6-1mdv2011.0
-+ Revision: 586676
-- new version 1.6
-- fix file list
-
-* Sat Aug 21 2010 Jani Välimaa <wally@mandriva.org> 1.5-1mdv2011.0
-+ Revision: 571775
-- new version 1.5
-- disable rpath
-- use provided .desktop file
-
-* Tue Jul 13 2010 Jani Välimaa <wally@mandriva.org> 1.4.1-3mdv2011.0
-+ Revision: 552777
-- use a fully versioned dependency in subpackage
-
-* Sat Jul 10 2010 Jani Välimaa <wally@mandriva.org> 1.4.1-2mdv2011.0
-+ Revision: 550503
-- split GTK stuff to a separate package
-
-* Wed Jun 23 2010 Jani Välimaa <wally@mandriva.org> 1.4.1-1mdv2011.0
-+ Revision: 548748
-- import redshift
+%{_datadir}/applications/%{name}-gtk.desktop
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/appdata/%{name}-gtk.appdata.xml
+%{python_sitelib}/redshift_gtk/
+%{_userunitdir}/*.service
 
 
