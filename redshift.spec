@@ -14,9 +14,11 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	pkgconfig(xxf86vm)
 BuildRequires:	python-devel
+BuildRequires:	intltool
+
 # For 1.7 geoclue support is reported to be broken, but later we can try it
-# BuildRequires: geoclue-devel
-# Requires:      geoclue
+BuildRequires: geoclue-devel
+Requires:      geoclue
 
 %package gtk
 Summary:	GTK integration for Redshift
