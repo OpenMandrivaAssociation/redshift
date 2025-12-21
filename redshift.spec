@@ -9,6 +9,11 @@ Url:		https://jonls.dk/redshift/
 Source:		http://launchpad.net/redshift/trunk/%{version}/+download/%{name}-%{version}.tar.xz
 License:	GPLv3+
 Group:		Graphical desktop/Other
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	x11-server-devel
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gconf-2.0)
