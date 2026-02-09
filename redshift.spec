@@ -30,7 +30,7 @@ Requires:	systemd
 %package gtk
 Summary:	GTK integration for Redshift
 Group:		Graphical desktop/Other
-Requires:	pygtk2.0
+#Requires:	pygtk2.0
 Requires:	redshift = %{version}-%{release}
 
 %description
